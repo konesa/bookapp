@@ -1,0 +1,33 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Add Book</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<h1>Edit book</h1>
+	    <form action="#" th:action="@{/postedit}" th:object="${book}" method="post">
+		
+		<input type="hidden" id="id" name="id" value ="${book.id}" th:field="*{id}">
+		
+		<label for="author">Author:</label><br> 
+		<input type="text" id="author" name="author" value ="${book.author}" th:field="*{author}"><br> 
+		
+		<label for="title">Title:</label><br>
+		<input type="text" id="title" name="title" value ="${book.title}" th:field="*{title}"><br>
+		
+		<label for="year">Year:</label><br>
+		<input type="number" id="year" name="year" value ="${book.year}" th:field="*{year}"><br>
+		
+		<label for="isbn">ISBN:</label><br>
+		<input type="text" id="isbn" name="isbn" value ="${book.isbn}" th:field="*{isbn}"><br>
+		
+		<label for="price">Price:</label><br> 
+		<input type="number" id="price" name="price" value ="${book.price}" min ="0" step = ".01" th:field="*{price}"><br>
+		
+		<input type ="submit" value ="Submit"/>
+	</form>
+</body>
+</html>
