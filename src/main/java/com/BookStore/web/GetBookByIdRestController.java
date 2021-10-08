@@ -13,7 +13,7 @@ import com.BookStore.domain.Book;
 import com.BookStore.domain.BookRepository;
 
 @RestController
-public class getBookByIdRestController {
+public class GetBookByIdRestController {
 
 	@Autowired
 	private BookRepository bookRepo;

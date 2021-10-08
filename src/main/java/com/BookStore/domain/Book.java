@@ -8,7 +8,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "books")
 public class Book {
@@ -29,7 +28,6 @@ public class Book {
 
 	}
 
-	
 	public Book(String title, String author, int year, String isbn, double price, Category category) {
 		this.title = title;
 		this.author = author;
@@ -38,7 +36,6 @@ public class Book {
 		this.price = price;
 		this.category = category;
 	}
-
 
 	public long getId() {
 		return id;
@@ -96,11 +93,10 @@ public class Book {
 		this.category = category;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + year + ", isbn=" + isbn
 				+ ", price=" + price + ", category=" + category + "]";
 	}
-	
+
 }
